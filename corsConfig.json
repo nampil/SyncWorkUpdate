@@ -1,0 +1,13 @@
+[
+  {
+    "origin": [
+      "http://localhost:3000",
+      "https://daytona-system-dev.web.app",
+      "https://daytona-system-dev.firebaseapp.com",
+      "https://daytona-system-dev--downloading-hzmawg91.web.app"
+    ],
+    "method": ["GET"],
+    "responseHeader": ["Content-Type"],
+    "maxAgeSeconds": 3600
+  }
+]

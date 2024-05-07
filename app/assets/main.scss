@@ -1,0 +1,98 @@
+:root {
+  --clr-bg-alt: #f1f1f1;
+  --clr-neutral-200: #f4f4f4;
+  --clr-orange-400: #edc15b;
+}
+
+.theme--dark {
+  --clr-bg-base: #1c1f21;
+  --clr-bg-alt: #212629;
+  --clr-neutral-200: #282d2f;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body {
+  overflow: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#app {
+  height: 100vh;
+}
+.dash-main,
+.dash-container {
+  height: 100%;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.dash-container::-webkit-scrollbar,
+.dash-main::-webkit-scrollbar {
+  display: none;
+}
+
+.firebase-emulator-warning {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.h-100 {
+  height: 100%;
+}
+.scrollArea {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  overflow-y: auto;
+}
+
+.v-tooltip__content.small {
+  padding: 4px;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+@for $value from 1 to 40 {
+  .gap-#{$value} {
+    gap: #{$value}px;
+  }
+}
+
+.text--small {
+  font-size: 0.85em !important;
+}
+
+.text--xsmall {
+  font-size: 0.65em;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  background-color: inherit;
+}
+
+.even-columns {
+  display: flex;
+  & > * {
+    flex: 1;
+  }
+}
+
+.three-columns {
+  display: grid;
+
+  display: grid;
+  grid-auto-columns: minmax(0, 33.33%);
+  grid-auto-flow: column;
+}
