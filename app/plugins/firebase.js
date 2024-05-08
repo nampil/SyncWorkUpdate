@@ -16,13 +16,13 @@ import { getStorage, ref, connectStorageEmulator } from 'firebase/storage'
 // import { getMessaging, onMessage, isSupported } from 'firebase/messaging'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDWd616s9Gg4A31zbn2MEw4F-69VIYQhWU',
-  authDomain: 'daytona-system-dev.firebaseapp.com',
-  projectId: 'daytona-system-dev',
-  storageBucket: 'daytona-system-dev.appspot.com',
-  messagingSenderId: '281912731287',
-  appId: '1:281912731287:web:fb2ad7c6feadac3da62bd2',
-  measurementId: 'G-EC4NYESSLX',
+  apiKey: process.env.FB_APYKEY,
+  authDomain: process.env.FB_AUTH_DOMAIN,
+  projectId: process.env.FB_PROJECT_ID,
+  storageBucket: process.env.FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.FB_MESSAGING_SENDER_ID,
+  appId: process.env.FB_APP_ID,
+  measurementId: process.env.FB_MEASUREMENT_ID,
 }
 
 // eslint-disable-next-line
