@@ -1,0 +1,136 @@
+import '@mdi/font/css/materialdesignicons.css'
+import colors from 'vuetify/util/colors'
+
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+
+const light = {
+  dark: false,
+  colors: {
+    background: '#FFFFFF',
+    surface: '#FFFFFF',
+    'surface-bright': '#FFFFFF',
+    'surface-light': '#EEEEEE',
+    'surface-variant': '#424242',
+    'on-surface-variant': '#EEEEEE',
+    primary: '#1e67d4',
+    primary_alt: colors.blueGrey.darken1,
+    secondary: '#138ad9',
+    terciary: '#e9f7ff',
+    accent: '#DCEF30',
+    accent_alt: colors.amber.lighten1,
+
+    info: colors.blueGrey.lighten1,
+    warning: colors.amber.base,
+    error: colors.deepOrange.accent4,
+    success: colors.green.accent3,
+    // New
+    icon_alt: colors.blue.lighten2,
+    route_alt: colors.grey.lighten3,
+    badge_alt: colors.blueGrey.lighten1,
+    task: colors.shades.white,
+    background_toolbar: '#bcd8e6',
+    icon_camera: '#fff',
+    background_route_selected: '#ddecf6',
+    primary_text: colors.blue.lighten2,
+    info_text: '#7c7f89',
+    toolbarCdp: '#5ab7f5',
+    terciary_alt: colors.blue.lighten4,
+    tagged: '#138ad9',
+    background_drawer: '#f8fdff',
+    text_stops: '#5ab7f5',
+    info_stops: '#76bae7',
+    background_stops: '#ccecff',
+    background_select: '#93d4ff',
+    background_route_update: '#e9f7ff',
+  },
+  variables: {
+    'border-color': '#000000',
+    'border-opacity': 0.12,
+    'high-emphasis-opacity': 0.87,
+    'medium-emphasis-opacity': 0.6,
+    'disabled-opacity': 0.38,
+    'idle-opacity': 0.04,
+    'hover-opacity': 0.04,
+    'focus-opacity': 0.12,
+    'selected-opacity': 0.08,
+    'activated-opacity': 0.12,
+    'pressed-opacity': 0.12,
+    'dragged-opacity': 0.08,
+    'theme-kbd': '#212529',
+    'theme-on-kbd': '#FFFFFF',
+    'theme-code': '#F5F5F5',
+    'theme-on-code': '#000000',
+  },
+}
+
+const dark = {
+  dark: true,
+  colors: {
+    background: '#121212',
+    surface: '#121212',
+    'surface-bright': '#121212',
+    'surface-light': '#424242',
+    'surface-variant': '#FFFFFF',
+    'on-surface-variant': '#121212',
+    primary: '#3276dc',
+    primary_alt: colors.blueGrey.darken1,
+    secondary: '#24334c',
+    terciary: '#252d37',
+    terciary_alt: '#32363b',
+    accent: '#DCEF30',
+    accent_alt: '#aec00c',
+    info: '#7aa5e7',
+    warning: colors.amber.base,
+    error: colors.deepOrange.accent4,
+    success: colors.green.accent3,
+    // New
+    icon_alt: colors.blue.lighten2,
+    route_alt: colors.grey.lighten3,
+    badge_alt: colors.blueGrey.lighten1,
+    task: colors.shades.white,
+    background_toolbar: '#bcd8e6',
+    icon_camera: '#fff',
+    background_route_selected: '#ddecf6',
+    primary_text: colors.blue.lighten2,
+    info_text: '#7c7f89',
+    toolbarCdp: '#5ab7f5',
+    tagged: '#138ad9',
+    background_drawer: '#f8fdff',
+    text_stops: '#5ab7f5',
+    info_stops: '#76bae7',
+    background_stops: '#ccecff',
+    background_select: '#93d4ff',
+  },
+  variables: {
+    'border-color': '#000000',
+    'border-opacity': 0.12,
+    'high-emphasis-opacity': 0.87,
+    'medium-emphasis-opacity': 0.6,
+    'disabled-opacity': 0.38,
+    'idle-opacity': 0.04,
+    'hover-opacity': 0.04,
+    'focus-opacity': 0.12,
+    'selected-opacity': 0.08,
+    'activated-opacity': 0.12,
+    'pressed-opacity': 0.12,
+    'dragged-opacity': 0.08,
+    'theme-kbd': '#212529',
+    'theme-on-kbd': '#FFFFFF',
+    'theme-code': '#F5F5F5',
+    'theme-on-code': '#000000',
+  },
+}
+
+export default defineNuxtPlugin((app) => {
+  const vuetify = createVuetify({
+    theme: {
+      defaultTheme: 'light',
+      themes: {
+        light,
+        dark,
+      },
+    },
+  })
+  app.vueApp.use(vuetify)
+})

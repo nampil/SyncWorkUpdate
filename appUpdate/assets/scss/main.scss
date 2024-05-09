@@ -1,0 +1,7 @@
+$fx: 0.25;
+
+@for $i from 0 to 40 {
+  .gap-#{$i} {
+    gap: #{$i * $fx}rem;
+  }
+}
