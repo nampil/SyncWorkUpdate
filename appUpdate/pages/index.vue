@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <v-toolbar :density="'compact'" color="secondary">
-      <v-toolbar-title>Orders</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn color="primary">New Order</v-btn>
-    </v-toolbar>
-    <v-card> </v-card>
+  <div class="h-100 d-flex flex-column">
+    <HomeToolbar />
+    <orders-table></orders-table>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import OrdersTable from '@@/components/home/OrdersTable.vue'
+import HomeToolbar from '../components/home/homeToolbar/homeToolbar.vue'
+</script>
 
 <style lang="scss" scoped></style>

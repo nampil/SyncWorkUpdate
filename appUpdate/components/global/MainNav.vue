@@ -15,13 +15,20 @@
           <nuxt-link class="nav-link" to="/dispatching">Dispatching</nuxt-link>
         </li>
         <li><nuxt-link class="nav-link" to="/cdp">CDP</nuxt-link></li>
+        <li><nuxt-link class="nav-link" to="/admin">Admin</nuxt-link></li>
+        <li><nuxt-link class="nav-link" to="/search">Search</nuxt-link></li>
       </ul>
     </nav>
     <v-spacer />
+    <div class="actions | mr-4">
+      <main-nav-profile-btn />
+    </div>
   </v-app-bar>
 </template>
 
-<script setup></script>
+<script setup>
+import MainNavProfileBtn from '@/components/global/main-nav/ProfileBtn.vue'
+</script>
 
 <style lang="scss" scoped>
 .nav-list {
